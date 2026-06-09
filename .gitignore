@@ -1,0 +1,7 @@
+.wrangler/
+node_modules/
+.DS_Store
+.tools/
+open-golf-source/
+open-golf-source/out/
+open-golf-source/src/common/data_zip.h

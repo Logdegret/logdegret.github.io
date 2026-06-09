@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Golf Dreams</title>
+    <meta name="description" content="A lightweight arcade golf game inspired by breezy mobile golf games, built from scratch for the browser.">
+    <meta name="google-adsense-account" content="ca-pub-4125872061932966">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4125872061932966" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="game-shell">
+      <div id="scene" aria-label="Golf Dreams 3D course view"></div>
+
+      <section class="hud hud-top" aria-label="Shot information">
+        <div class="hud-card">
+          <span id="lie">Tee</span>
+          <strong id="distance">430 yds</strong>
+        </div>
+        <div class="hole-card">
+          <span id="holeLabel">Hole 1</span>
+          <strong id="parLabel">Par 4</strong>
+          <small id="holeDistance">430 yds</small>
+        </div>
+        <div class="hud-card">
+          <span id="strokeLabel">Stroke</span>
+          <strong id="strokeCount">1</strong>
+        </div>
+      </section>
+
+      <section class="hud wind-card" aria-label="Wind">
+        <span>Wind</span>
+        <strong id="windLabel">12 mph</strong>
+      </section>
+
+      <section class="hud message-card" id="messageCard" aria-live="polite">
+        <strong id="messageTitle">Hole 1</strong>
+        <span id="messageText">Pick a club, aim, and swing.</span>
+      </section>
+
+      <section class="controls" aria-label="Golf controls">
+        <div class="club-row" id="clubRow"></div>
+        <div class="swing-panel">
+          <button class="icon-button" id="aimLeft" type="button" aria-label="Aim left">‹</button>
+          <label class="power-control">
+            <span>Power</span>
+            <input id="powerRange" type="range" min="35" max="100" value="82">
+          </label>
+          <button class="icon-button" id="aimRight" type="button" aria-label="Aim right">›</button>
+          <button class="swing-button" id="swingButton" type="button">Swing</button>
+        </div>
+      </section>
+
+      <nav class="screen-tabs" aria-label="Views">
+        <button type="button" class="is-active" data-view="play">Play</button>
+        <button type="button" data-view="score">Score</button>
+        <button type="button" data-view="shop">Clubs</button>
+      </nav>
+
+      <section class="drawer is-hidden" id="scoreView" aria-label="Scorecard">
+        <div class="drawer-header">
+          <strong>Scorecard</strong>
+          <button type="button" data-close="score">Close</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Hole</th>
+              <th>Par</th>
+              <th>You</th>
+              <th>Rival</th>
+            </tr>
+          </thead>
+          <tbody id="scoreRows"></tbody>
+        </table>
+      </section>
+
+      <section class="drawer is-hidden" id="shopView" aria-label="Club upgrades">
+        <div class="drawer-header">
+          <strong>Club upgrades</strong>
+          <button type="button" data-close="shop">Close</button>
+        </div>
+        <div class="coins"><span>Coins</span><strong id="coinCount">300</strong></div>
+        <div class="upgrade-grid" id="upgradeGrid"></div>
+      </section>
+    </main>
+
+    <script type="module" src="game.js"></script>
+  </body>
+</html>

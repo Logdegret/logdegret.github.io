@@ -1,0 +1,438 @@
+:root {
+  color-scheme: light;
+  --ink: #1e3040;
+  --muted: #698090;
+  --panel: rgba(255, 255, 255, .92);
+  --line: rgba(42, 73, 91, .16);
+  --aqua: #18bed4;
+  --green: #23c36a;
+  --lime: #a9e85f;
+  --yellow: #ffd94d;
+  --orange: #ff8d4f;
+  --violet: #6c57ff;
+  --shadow: 0 18px 46px rgba(15, 55, 72, .22);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  overflow: hidden;
+  background: #153242;
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+.game-shell {
+  position: relative;
+  width: min(100vw, 620px);
+  height: 100dvh;
+  min-height: 620px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #77d868;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .18), 0 24px 80px rgba(0, 0, 0, .38);
+}
+
+#scene,
+#scene canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+#scene {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hud {
+  position: absolute;
+  z-index: 3;
+}
+
+.hud-top {
+  top: max(10px, env(safe-area-inset-top));
+  left: 10px;
+  right: 10px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 92px minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+}
+
+.hud-card,
+.hole-card,
+.wind-card,
+.message-card,
+.drawer,
+.club-card {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+}
+
+.hud-card,
+.hole-card,
+.wind-card {
+  min-height: 48px;
+  padding: 8px 10px;
+  border-radius: 7px;
+}
+
+.hud-card span,
+.wind-card span,
+.message-card span,
+.power-control span,
+.coins span {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.hud-card strong,
+.wind-card strong {
+  display: block;
+  margin-top: 2px;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1;
+}
+
+.hole-card {
+  display: grid;
+  place-items: center;
+  gap: 1px;
+  background: linear-gradient(135deg, #00a5b7, #24c96f);
+  color: white;
+  text-align: center;
+}
+
+.hole-card span,
+.hole-card small {
+  color: rgba(255, 255, 255, .86);
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.hole-card strong {
+  font-size: 17px;
+  line-height: 1;
+}
+
+.wind-card {
+  top: 78px;
+  left: 10px;
+  width: 112px;
+}
+
+.message-card {
+  top: 78px;
+  right: 10px;
+  width: min(260px, calc(100% - 142px));
+  padding: 10px 12px;
+  border-radius: 7px;
+}
+
+.message-card strong {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 15px;
+}
+
+.message-card span {
+  text-transform: none;
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+.controls {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: calc(58px + env(safe-area-inset-bottom));
+  z-index: 4;
+  display: grid;
+  gap: 10px;
+}
+
+.club-row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.club-card {
+  min-height: 74px;
+  padding: 8px 6px 6px;
+  border-radius: 7px;
+  color: var(--ink);
+  text-align: left;
+}
+
+.club-card.is-active {
+  outline: 3px solid var(--aqua);
+  background: white;
+}
+
+.club-card small {
+  display: block;
+  color: white;
+  width: max-content;
+  min-width: 24px;
+  margin-bottom: 8px;
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, var(--violet), #1cb5e0);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.club-card strong {
+  display: block;
+  font-size: clamp(11px, 2.8vw, 14px);
+  line-height: 1.1;
+}
+
+.club-card span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.swing-panel {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 44px 94px;
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .88);
+  box-shadow: var(--shadow);
+}
+
+.icon-button,
+.swing-button,
+.screen-tabs button,
+.drawer-header button {
+  min-height: 42px;
+  border-radius: 7px;
+  color: white;
+  font-weight: 950;
+}
+
+.icon-button {
+  background: #19b9d5;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.swing-button {
+  background: linear-gradient(135deg, #ff8955, #ff4e7b);
+  font-size: 16px;
+}
+
+.power-control {
+  min-width: 0;
+}
+
+.power-control input {
+  width: 100%;
+  accent-color: var(--orange);
+}
+
+.screen-tabs {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: max(8px, env(safe-area-inset-bottom));
+  z-index: 5;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.screen-tabs button {
+  background: rgba(255, 255, 255, .9);
+  color: var(--muted);
+  box-shadow: 0 8px 24px rgba(19, 54, 70, .18);
+}
+
+.screen-tabs button.is-active {
+  background: #18bed4;
+  color: white;
+}
+
+.drawer {
+  position: absolute;
+  z-index: 8;
+  left: 10px;
+  right: 10px;
+  bottom: calc(58px + env(safe-area-inset-bottom));
+  max-height: min(56dvh, 430px);
+  overflow: auto;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.drawer.is-hidden {
+  display: none;
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.drawer-header strong {
+  font-size: 20px;
+}
+
+.drawer-header button {
+  min-height: 34px;
+  padding: 0 12px;
+  background: #18bed4;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 7px;
+  background: white;
+}
+
+th,
+td {
+  padding: 9px 8px;
+  border-bottom: 1px solid #e4eef3;
+  text-align: center;
+  font-size: 13px;
+}
+
+th {
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.coins {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px 12px;
+  border-radius: 7px;
+  background: #f5fbff;
+}
+
+.coins strong {
+  color: #d29a00;
+  font-size: 20px;
+}
+
+.upgrade-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.upgrade-card {
+  min-height: 116px;
+  padding: 10px;
+  border: 1px solid #ddebf1;
+  border-radius: 7px;
+  background: white;
+}
+
+.upgrade-card strong {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.stat {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 8px;
+  align-items: center;
+  margin: 5px 0;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.bar {
+  height: 7px;
+  border-radius: 999px;
+  background: #dfeaf0;
+  overflow: hidden;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--yellow), var(--aqua));
+}
+
+.upgrade-card button {
+  width: 100%;
+  min-height: 34px;
+  margin-top: 8px;
+  border-radius: 7px;
+  background: #25c873;
+  color: white;
+  font-weight: 950;
+}
+
+@media (max-width: 430px) {
+  .game-shell {
+    width: 100vw;
+    min-height: 560px;
+  }
+
+  .club-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .club-card {
+    min-height: 62px;
+  }
+
+  .swing-panel {
+    grid-template-columns: 42px minmax(0, 1fr) 42px;
+  }
+
+  .swing-button {
+    grid-column: 1 / -1;
+  }
+
+  .message-card {
+    top: 72px;
+    width: min(210px, calc(100% - 136px));
+  }
+}

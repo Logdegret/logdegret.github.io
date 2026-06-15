@@ -1,167 +1,152 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Logdegret</title>
-    <meta name="description" content="Logdegret's GitHub Pages homepage: projects, build notes, README writing help, browser games, and current maker events.">
-    <meta name="google-adsense-account" content="ca-pub-4125872061932966">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4125872061932966" crossorigin="anonymous"></script>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%234fe39a' d='M32 4 60 52H4z'/%3E%3Cpath fill='%2365d6ff' d='M32 4 4 52h28z' opacity='.88'/%3E%3Cpath fill='%23ffc857' d='M32 52h28L46 28z'/%3E%3C/svg%3E">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Plato Labs | Independent App Studio</title>
+    <meta
+      name="description"
+      content="Plato Labs is an independent app studio creating focused mobile products, starting with Golf Claw for iOS."
+    />
+    <meta name="google-adsense-account" content="ca-pub-4125872061932966" />
+    <link rel="icon" href="logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4125872061932966"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body>
-    <div class="app personal-home">
-      <header class="site-top">
-        <a class="home-mark" href="#top" aria-label="Logdegret home">
-          <svg viewBox="0 0 64 64" aria-hidden="true">
-            <path fill="#4fe39a" d="M32 4 60 52H4z"></path>
-            <path fill="#65d6ff" d="M32 4 4 52h28z" opacity=".88"></path>
-            <path fill="#ffc857" d="M32 52h28L46 28z"></path>
-          </svg>
-          <span>Logdegret</span>
-        </a>
-        <nav class="top-nav" aria-label="Main navigation">
-          <a href="#projects">Projects</a>
-          <a href="#readme-guide">README Help</a>
-          <a href="#summer">Summer Picks</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </header>
+  <body class="plato-page">
+    <header class="site-header" aria-label="Main navigation">
+      <a class="brand" href="./" aria-label="Plato Labs home">
+        <img class="brand-mark" src="logo.svg" alt="" />
+        <span>Plato Labs</span>
+      </a>
+      <nav>
+        <a href="#apps">Apps</a>
+        <a href="#studio">Studio</a>
+        <a href="golfclaw/">Golf Claw</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-      <main id="top">
-        <section class="personal-hero" aria-labelledby="pageTitle">
-          <div>
-            <p class="eyebrow">GitHub Pages homepage</p>
-            <h1 id="pageTitle">Projects, notes, and useful things I am building.</h1>
-            <p class="intro">This is Logdegret's home base: a small directory for my games, experiments, project writeups, README advice, and seasonal maker links worth checking out. It is meant to be more like a working notebook than a one-topic landing page.</p>
-            <div class="hero-actions">
-              <a class="primary-action" href="#projects">My projects</a>
-              <a class="secondary-action" href="#readme-guide">Write a better README</a>
-            </div>
+    <main id="top">
+      <section class="hero plato-hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">Independent app studio</p>
+          <h1 id="hero-title">Apps made for the moments you actually practice.</h1>
+          <p class="hero-copy">
+            Plato Labs builds focused iOS apps with crisp design, practical AI,
+            and the kind of polish that makes a tool feel worth opening again.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="https://apps.apple.com/us/app/golf-claw/id6762070407">Download Golf Claw</a>
+            <a class="button secondary" href="mailto:hello@platolabs.co">Get in touch</a>
           </div>
-          <div class="home-board" aria-label="Homepage highlights">
-            <article>
-              <span>Now</span>
-              <strong>Summer maker season</strong>
-              <p>Build a project, write down what changed, and ship something small enough to explain.</p>
-            </article>
-            <article>
-              <span>Focus</span>
-              <strong>Games and guides</strong>
-              <p>Browser games stay here, but they are part of the portfolio rather than the whole site.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="project-section" id="projects" aria-labelledby="projectsTitle">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">My projects</p>
-              <h2 id="projectsTitle">Things to open first</h2>
-            </div>
-          </div>
-          <div class="project-grid">
-            <article>
-              <p class="eyebrow">Game</p>
-              <h3>Bossbound Party</h3>
-              <p>A pixel-art RPG project with solo play, local co-op, online rooms, towns, quests, and boss fights. It belongs in the project list, but the full game files live in the games repository.</p>
-              <div class="card-actions">
-                <a class="primary-action compact-link" href="https://github.com/Logdegret/HunterGames/tree/main/games/bossbound">Project files</a>
-              </div>
-            </article>
-            <article>
-              <p class="eyebrow">Open source</p>
-              <h3>Open Golf Online</h3>
-              <p>A browser build of Open Golf with party-room features, synced shots, scorecards, and chat. The project link points to the source and hosted-game files instead of copying the whole game into this homepage repo.</p>
-              <div class="card-actions">
-                <a class="primary-action compact-link" href="https://github.com/Logdegret/HunterGames/tree/main/games/open-golf">Project files</a>
-              </div>
-            </article>
-            <article>
-              <p class="eyebrow">Site</p>
-              <h3>Homepage notes</h3>
-              <p>This site is the front door for projects, short guides, and seasonal links. It should stay lightweight enough to explain quickly and update without dragging in unrelated app files.</p>
-              <div class="card-actions">
-                <a class="secondary-action compact-link" href="#readme-guide">README guide</a>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="readme-section" id="readme-guide" aria-labelledby="readmeTitle">
-          <div>
-            <p class="eyebrow">Project help</p>
-            <h2 id="readmeTitle">How to write a README people can actually use</h2>
-            <p>A good README should answer the questions someone has before they clone, play, test, or contribute. It does not need to be huge. It needs to be honest, specific, and easy to scan.</p>
-          </div>
-          <div class="readme-steps">
-            <article>
-              <span>1</span>
-              <h3>Say what it is</h3>
-              <p>Open with one plain sentence: what the project does, who it is for, and why it exists. Avoid vague lines like "a cool app" or "my project."</p>
-            </article>
-            <article>
-              <span>2</span>
-              <h3>Show how to run it</h3>
-              <p>Include the exact command or link someone needs first. If there are extra steps, list them in order and mention anything that is optional.</p>
-            </article>
-            <article>
-              <span>3</span>
-              <h3>Explain the status</h3>
-              <p>Tell visitors what works, what is unfinished, and what you want to improve next. A clear limitation is better than pretending everything is polished.</p>
-            </article>
-            <article>
-              <span>4</span>
-              <h3>Add useful proof</h3>
-              <p>Screenshots, controls, demo links, credits, license notes, and a small changelog make the project easier to trust and easier to return to later.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="summer-section" id="summer" aria-labelledby="summerTitle">
-          <div>
-            <p class="eyebrow">Summer 2026</p>
-            <h2 id="summerTitle">Fun things to build or follow right now</h2>
-            <p>These are current picks for project energy: places to build, write, and share something instead of just scrolling. I will keep this section small so it stays curated.</p>
-          </div>
-          <div class="summer-list">
-            <article>
-              <h3>Stardance by Hack Club</h3>
-              <p>Stardance is a free online summer program for teens 13-18 where you make technical projects, log hours, and earn prizes. It runs June 1 through September 30, 2026, so it fits the build-something-this-summer mood perfectly.</p>
-              <a class="primary-action compact-link" href="https://stardance.space">Visit stardance.space</a>
-            </article>
-            <article>
-              <h3>Make a tiny launch page</h3>
-              <p>Pick one project and give it a page with a title, screenshot, what changed this week, and a link to try it. A small clear page is better than a big unfinished redesign.</p>
-            </article>
-            <article>
-              <h3>Keep a shipping log</h3>
-              <p>Once a week, write three bullets: what shipped, what broke, and what you learned. Those notes become README updates, portfolio content, and better commit messages.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="game-notes" id="project-notes" aria-labelledby="projectNotesTitle">
-          <p class="eyebrow">Project notes</p>
-          <h2 id="projectNotesTitle">Why this homepage is intentionally small</h2>
-          <p>The user homepage should explain what exists and where to go next. Large game builds, worker code, and development artifacts belong in project repositories, while this site keeps the curated summary, useful writing notes, and current links.</p>
-        </section>
-      </main>
-
-      <footer class="site-footer">
-        <div>
-          <strong>Logdegret</strong>
-          <p>Personal GitHub Pages homepage for projects, notes, games, and maker links.</p>
         </div>
-        <nav aria-label="Footer">
-          <a href="#projects">Projects</a>
-          <a href="#readme-guide">README Help</a>
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms</a>
-        </nav>
-      </footer>
-    </div>
+
+        <div class="plato-hero-stage" aria-hidden="true">
+          <div class="hero-qr-card">
+            <img src="app-store-qr.png" alt="" />
+            <strong>TEST IT OUT!</strong>
+          </div>
+          <div class="phone-frame home-phone">
+            <img src="golfclaw-analyze-app.png" alt="" />
+            <span class="phone-sensor" aria-hidden="true"></span>
+          </div>
+          <div class="film-card film-card-left">
+            <span>First launch</span>
+            <strong>Golf Claw</strong>
+          </div>
+          <div class="film-card film-card-right">
+            <span>AI coach</span>
+            <strong>Swing analysis</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-band plato-band" aria-label="Company summary">
+        <p>
+          Plato Labs is building a portfolio of small, practical mobile products.
+          Each app starts with one sharp problem, then gets shaped until the
+          experience feels fast, useful, and calm.
+        </p>
+      </section>
+
+      <section class="studio-principles" aria-label="Plato Labs principles">
+        <div class="principles-copy">
+          <p class="eyebrow dark">How we build</p>
+          <h2>Small apps, treated like complete products.</h2>
+        </div>
+        <div class="principles-list">
+          <article>
+            <span class="feature-number">01</span>
+            <h3>Focused scope</h3>
+            <p>Products are built around one meaningful workflow, not feature sprawl.</p>
+          </article>
+          <article>
+            <span class="feature-number">02</span>
+            <h3>Mobile first</h3>
+            <p>Interfaces are designed for repeated use, quick decisions, and real contexts.</p>
+          </article>
+          <article>
+            <span class="feature-number">03</span>
+            <h3>Launch ready</h3>
+            <p>Marketing, support, privacy, and product surfaces are treated as one system.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="apps-section" id="apps">
+        <div class="section-copy">
+          <p class="eyebrow dark">First launch</p>
+          <h2>Meet Golf Claw.</h2>
+          <p>
+            Our first product is an iOS swing-analysis app that turns golf
+            videos into clear feedback, saved drills, and simple progress history.
+          </p>
+        </div>
+
+        <a class="app-card" href="golfclaw/" aria-label="Open Golf Claw page">
+          <img src="golfclaw-icon.png" alt="" />
+          <div>
+            <p class="panel-kicker">iOS app</p>
+            <h3>Golf Claw</h3>
+            <p>AI-powered golf swing analysis for focused practice sessions.</p>
+            <span>Open product page</span>
+          </div>
+        </a>
+      </section>
+
+      <section class="studio-section" id="studio">
+        <div>
+          <p class="eyebrow dark">The studio</p>
+          <h2>Small products, built with discipline.</h2>
+        </div>
+        <p>
+          Plato Labs is where careful product thinking meets crisp execution.
+          We keep scope intentional, polish the details that users actually feel,
+          and ship apps that are simple enough to understand and useful enough to keep.
+        </p>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <p class="eyebrow dark">Contact</p>
+        <h2>Have a product question or partnership idea?</h2>
+        <p>Reach Plato Labs directly.</p>
+        <a class="button contact" href="mailto:hello@platolabs.co">hello@platolabs.co</a>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 Plato Labs</span>
+      <div class="footer-links">
+        <a href="golfclaw/">Golf Claw</a>
+        <a href="mailto:hello@platolabs.co">Contact</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

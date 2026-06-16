@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — The Daily Brief</title>
+  <meta name="description" content="Contact The Daily Brief. Send us story tips, corrections, feedback, or general inquiries. We read everything we receive.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://logdegret.github.io/contact.html">
+  <link rel="stylesheet" href="styles.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4125872061932966" crossorigin="anonymous"></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="top-bar"><div class="container"><span class="top-bar-date" id="current-date"></span><div><a href="about.html">About</a> &nbsp;·&nbsp; <a href="contact.html">Contact</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a></div></div></div>
+  <header class="site-header"><div class="container"><div class="header-inner"><div><a href="index.html" class="site-logo">The Daily<span> Brief</span></a><p class="header-tagline">Independent News &amp; Analysis</p></div><button class="hamburger" id="hamburger-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></div></header>
+  <nav class="main-nav" aria-label="Main navigation"><div class="container"><div class="nav-inner"><a href="index.html">Home</a><a href="category-technology.html">Technology</a><a href="category-health.html">Health</a><a href="category-science.html">Science</a><a href="category-business.html">Business</a><a href="category-world.html">World</a><a href="category-lifestyle.html">Lifestyle</a></div></div></nav>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true"><a href="index.html">Home</a><a href="category-technology.html">Technology</a><a href="category-health.html">Health</a><a href="category-science.html">Science</a><a href="category-business.html">Business</a><a href="category-world.html">World</a><a href="category-lifestyle.html">Lifestyle</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+
+  <main id="main-content">
+    <div class="page-hero">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>We welcome tips, corrections, feedback, and questions</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="contact-grid" style="max-width:900px;margin:40px auto;">
+
+        <div class="contact-form">
+          <h2 style="font-size:1.3rem;margin-bottom:18px;">Send Us a Message</h2>
+          <form onsubmit="handleContact(event)" novalidate>
+            <label for="contact-name">Your Name <span aria-hidden="true" style="color:#dc2626;">*</span></label>
+            <input type="text" id="contact-name" name="name" required autocomplete="name" placeholder="Jane Smith">
+
+            <label for="contact-email">Email Address <span aria-hidden="true" style="color:#dc2626;">*</span></label>
+            <input type="email" id="contact-email" name="email" required autocomplete="email" placeholder="jane@example.com">
+
+            <label for="contact-subject">Subject</label>
+            <select id="contact-subject" name="subject">
+              <option value="">Select a topic…</option>
+              <option value="tip">Story tip or lead</option>
+              <option value="correction">Correction request</option>
+              <option value="feedback">General feedback</option>
+              <option value="advertising">Advertising inquiry</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="contact-message">Message <span aria-hidden="true" style="color:#dc2626;">*</span></label>
+            <textarea id="contact-message" name="message" required placeholder="Tell us what's on your mind…"></textarea>
+
+            <button type="submit">Send Message</button>
+            <p class="form-msg" id="contact-msg" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <h2 style="font-size:1.3rem;margin-bottom:18px;">Other Ways to Reach Us</h2>
+
+          <div class="info-item">
+            <svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div>
+              <strong>Story Tips &amp; Corrections</strong>
+              <p>Use the form to the left. We read and consider every submission. For urgent corrections, please select "Correction request" in the subject field.</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <div>
+              <strong>Response Time</strong>
+              <p>We aim to respond to all inquiries within 2 business days. Story tips and correction requests are prioritized.</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <div>
+              <strong>About Our Publication</strong>
+              <p>Learn about our editorial standards, corrections policy, and how we operate by visiting our <a href="about.html" style="color:#dc2626;">About page</a>.</p>
+            </div>
+          </div>
+
+          <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:6px;padding:18px;margin-top:24px;">
+            <p style="font-size:13px;color:#6b7280;line-height:1.6;"><strong style="color:#111827;">Privacy note:</strong> Information submitted via this form is used solely to respond to your inquiry. We do not share your contact details with third parties or add you to marketing lists without your explicit consent. See our <a href="privacy.html" style="color:#dc2626;">Privacy Policy</a> for full details.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer><div class="container"><div class="footer-top"><div><div class="footer-logo">The Daily<span> Brief</span></div><p class="footer-desc">Independent reporting on technology, health, science, business, and world affairs.</p></div><div class="footer-col"><h4>Sections</h4><ul><li><a href="category-technology.html">Technology</a></li><li><a href="category-health.html">Health</a></li><li><a href="category-science.html">Science</a></li><li><a href="category-business.html">Business</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2025 The Daily Brief. All rights reserved.</p><div class="footer-bottom-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a></div></div></div><div class="footer-disclaimer"><p>The Daily Brief participates in online advertising programs including Google AdSense. Editorial content is independent of advertising relationships.</p></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>

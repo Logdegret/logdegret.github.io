@@ -34,8 +34,9 @@ h1,h2,h3,h4 { font-family: 'Newsreader', Georgia, serif; line-height: 1.25; }
 /* ---- HEADER ---- */
 .site-header { border-bottom: 3px solid var(--red); padding: 18px 0 12px; }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.site-logo { font-family: 'Newsreader', Georgia, serif; font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 700; color: var(--text); letter-spacing: -0.03em; }
-.site-logo span { color: var(--red); }
+.site-logo { display: inline-flex; align-items: center; }
+.logo-img { height: 45px; width: auto; display: block; }
+@media (max-width: 480px) { .logo-img { height: 36px; } }
 .header-tagline { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
 .header-search { display: flex; gap: 0; }
 .header-search input { border: 1px solid var(--border); border-right: none; padding: 8px 12px; font-size: 14px; border-radius: 4px 0 0 4px; width: 200px; outline: none; font-family: 'Roboto', sans-serif; }
